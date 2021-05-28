@@ -1,0 +1,35 @@
+# Types
+type Employee {
+    eId: ID
+    cedula: String
+    nombres: String
+    apellidos: String
+    telefono: String
+    celular: String
+    email: String
+    direccion: String
+}
+
+# Inputs
+input IEmployee {
+    eId: ID
+    cedula: String
+    nombres: String
+    apellidos: String
+    telefono: String
+    celular: String
+    email: String
+    direccion: String
+}
+
+# Queries
+type Query {
+    "Consulta todas los cursos"
+    employee: [Employee]
+}
+
+# Mutations
+type Mutation {
+    "Registra un curso"
+    createEmployee(input: IEmployee): Employee
+}
